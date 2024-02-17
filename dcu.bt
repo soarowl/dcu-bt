@@ -11,7 +11,7 @@
 //   History: 2024-02-17
 //------------------------------------------------
 
-typedef struct
+struct HEADER
 {
     ubyte majar;
     enum <ubyte> Platform {Win32_00 = 0, Win32_03 = 3, OSX32_04 = 4, iOSSimulator32_14 = 0x14, Win64_23 = 0x23, Android32_67 = 0x67, iOSDevice32_76 = 0x76, Android32_77 = 0x77, Android64_87 = 0x87, iOSDevice64_94 = 0x94} platform;
@@ -21,6 +21,6 @@ typedef struct
     DOSTIME time;
     DOSDATE date;
     uint32 crc;
-} HEADER;
+};
 
 HEADER header;
